@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+        <main>
+            <article>
+                <ul>
+                    {% for post in posts %}
+                    <li>
+                        <a href="{% url 'show' post.0.id %}">
+                            <h2>{{ post.0.title }}</h2>
+                            <header>
+                                <p>Escrito por: {{ post.0.author }}</p>
+                            </header>
+                            <main>
+                                <p>{{ post.0.intro }}</p>
+                            </main>
+                            <footer>
+                                <p>{{ post.0.created_at }}</p>
+                                <p>Likes: {{ post.1 }}</p>
+                            </footer>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </main>
+{% endblock %}

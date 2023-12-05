@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+body {
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5% 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > img {
+    width: 5%;
+    height: 5%;
+}
+
+header > a {
+    align-self:center
+}
+
+header > a > h1 {
+    font-size: 1.8em;
+}
+
+nav {
+    background-color: #7f8eb2;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5% 3%;
+    margin-bottom: 1%;
+    box-shadow: 0px 0px 5px #00000061;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > a > p {
+    color: #040303;
+}
+
+nav > input {
+    width: 50%;
+    padding: 0.5% 1%;
+}
+
+input[type=submit]{
+    background-color: red;
+    color: red
+}

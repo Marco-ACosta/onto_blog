@@ -1,0 +1,66 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+
+    <article>
+        <header> 
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.intro }}</p>
+        </header>
+        <main>
+            <p>{{ post.body }}</p>
+        </main>
+        <footer>
+            <p>Escrito por: {{ post.author }}</p>
+            <p>{{ post.created_at }}</p>
+            <p>Curtidas: {{ likes }}</p>
+        </footer>
+        {% if user.is_authenticated %}
+
+            <form action="{% url 'like_dislike' %}" method="POST">
+    
+                {% csrf_token %}
+
+                <input type="hidden" name="post_id" value="{{ post.id }}">
+                <input type="submit" value="Curtir">
+    
+            </form>
+
+            <form action="{% url 'comment' %}" method="POST">
+    
+                {% csrf_token %}
+                
+                {% include 'partials/_form.html' %}
+                
+                <input type="hidden" name="post_id" value="{{ post.id }}">
+                <input type="submit" value="Comentar">
+            
+            </form>
+
+        {%endif%}
+
+        <h3>Comentários</h3>
+        <aside>
+            <ul>
+                {% for comment in comments %}
+                <li>
+                    <header>
+                        <p3>{{ comment.user }}</p>
+                    </header>
+                    <main>
+                        <p>{{ comment.body }}</p>
+                    </main>
+                    <footer>
+                        <p>Escrito em: {{ comment.created_at }}</p>
+                    </footer>
+                    <br>
+                </li>
+                {% endfor %}
+            </ul>
+        </aside>
+
+    </article>
+
+</main>
+{% endblock %}

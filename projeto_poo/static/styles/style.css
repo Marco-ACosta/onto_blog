@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+body {
+    line-height: 1;
+    background-color: #f1f1f1;
+}
+
+footer {
+    background-color: #7f8eb2;
+    color: #f1f1f1;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    padding: 1% 3%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5% 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > img {
+    width: 5%;
+    height: 5%;
+}
+
+header > a {
+    align-self:center
+}
+
+header > a > h1 {
+    font-size: 1.8em;
+}
+
+nav {
+    background-color: #7f8eb2;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5% 3%;
+    box-shadow: 0px 0px 5px #00000061;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > a {
+    align-self:center;
+    margin: 0 1%;
+}
+
+nav > a > p {
+    color: #f1f1f1;
+}
+
+nav > form {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > form >  input[type=text] {
+    padding: 0.5% 2.5%;
+    border-radius: 5px;
+    margin: 0 0.5%;
+    background-color: #f1f1f1;
+    border: 1px solid #29292981;
+}
+
+nav > form >  input[type=submit] {
+    padding: 0.5% 2.5%;
+    border-radius: 5px;
+    margin: 0 0.5%;
+    background-color: #f1f1f1;
+    border: 1px solid #29292981;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+main {
+    padding: 0.5% 3%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #00000061;
+}
+
+main > article {
+    width: 100%;
+    margin: 0.5% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > article > header{
+    padding: 1% 3%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > article > header > h1{
+    font-size: 1.8em;
+    margin: 0;
+    padding: 3%;
+}
+
+main > article > header > p{
+    font-size: 0.8em;
+    margin: 0;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+main > article > main {
+    box-shadow: none;
+    text-align: justify;
+    padding: 3%;
+}
+
+main > article > footer{
+    width:100%;
+}
+
+main > article > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+main > article > aside {
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #7f8eb2;
+    padding: 0;
+    width: 100%;
+}
+
+main > article > aside > ul {
+    list-style: none;
+    padding : 1% 5%;
+}
+
+main > article > aside > ul > li {
+    width: 100%;
+    margin-bottom: 5%;
+    max-width: 80%;
+}
+
+
+main > article > aside > ul > li > header {
+    background-color: #fff;
+    color: #7f8eb2;
+    border : none;
+    margin: 0;
+    padding: 0;
+}
+
+main > article > aside > ul > li > footer {
+    justify-content: flex-end;
+    color: #8a8989;
+    background-color: #ffffff;
+    font-size: 0.6em;
+    margin: 0;
+    padding: 0;
+}
+
+main > article > aside > ul > li > main{
+    display: block;
+    box-shadow: none;
+    margin: 0;
+    padding: 3% 0;
+    align-items: flex-start;
+}
+
+main > article > aside > ul > li > main > p{
+    word-wrap: break-word;
+}
+
+main > article  > h3 {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    margin : 2% 0;
+}
+
+main > article > ul > li {
+    margin: 1% 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #7f8eb2;
+    box-shadow: 0px 5px 5px #00000061;
+}
+
+main > article > ul > li > a > h2{
+    background-color: #7f8eb2;
+    color: #f1f1f1;
+    padding: 1% 0.5%;
+}
+
+main > article > ul > li > a > header{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    background-color: #fff;
+    box-shadow: none;
+    border: 0px;
+}
+
+main > article > ul > li > a > header > p{
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+    color: #8e8e8e;
+}
+
+main > article > ul > li > a > footer{
+    justify-content: flex-end;
+    border: 0px;
+    padding: 1%;
+    color: #8a8989;
+    background-color: #ffffff;
+    font-size: 0.8em;
+}
+
+main > article > ul > li > a > footer > p {
+    margin-left: 1%;
+}
+
+main > article > ul > li > a > main {
+    display: block;
+    box-shadow: none;
+    font-size: 0.9em; 
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > form > article > input {
+    border : 1px solid #7f8eb2;
+    border-radius: 5px;
+    padding: 3%;
+}
+
+main > form > input[type=submit] {
+    border : 1px solid #7f8eb2;
+    border-radius: 5px;
+    padding: 3%;
+    color: #7f8eb2;
+    background-color: #fff;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5%
+}
+
+main > p > a {
+    color: #7f8eb2;
+}
+
+main > article > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > article > form > input {
+    border : 1px solid #7f8eb2;
+    color: #7f8eb2;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3%;
+    margin: 5%
+}
+
+article > textarea {
+    border : 1px solid #7f8eb2;
+    padding: 5%;
+    border-radius: 5px;
+}

@@ -1,0 +1,9 @@
+{% for field in form.visible_fields %}
+    <article>
+        {{ field.label }} 
+        <br>
+        {{ field }}
+        <br>
+        <br>    
+    </article>    
+{% endfor %}

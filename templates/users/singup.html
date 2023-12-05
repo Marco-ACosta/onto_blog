@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+
+        <h1> Cadastro </h1>
+        
+        <form action="{% url 'singup' %}" method='POST'>
+            {% csrf_token %}
+            {% include 'partials/_form.html' %}
+
+            <input type='submit' value='Cadastrar'>
+        </br>
+            {% include 'partials/_message.html' %}
+        </form>
+    
+        <p> já possui conta? <a href="{% url 'login' %}">Clique aqui</a> para se logar</p>
+    </main>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+
+        <h1> Login </h1>
+        
+        <form action="{% url 'login' %}" method='POST'>
+            {% csrf_token %}
+            {% include 'partials/_form.html' %}
+
+            <input type='submit' value='Logar'>
+        </br>
+            {% include 'partials/_message.html' %}
+        </form>
+    
+        <p> não possui conta? <a href="{% url 'singup' %}">Clique aqui</a> para se cadastrar</p>
+    </main>
+{% endblock %}
