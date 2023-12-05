@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from blog.forms import CommentForm
@@ -8,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 
 def index(request):
-    posts = Post.objects.all().order_by('-created_at')
+    posts = Post.objects.filter(posted_at__lt=datetime.now()).order_by('-posted_at')
     post_likes= []
     
     for post in posts:
