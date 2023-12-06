@@ -13,7 +13,7 @@
         </main>
         <footer>
             <p>Escrito por: {{ post.author }}</p>
-            <p>{{ post.created_at }}</p>
+            <p>{{ post.posted_at }}</p>
             <p>Curtidas: {{ likes }}</p>
         </footer>
         {% if user.is_authenticated %}
