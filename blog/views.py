@@ -28,7 +28,7 @@ def show(request, post_id):
     return render(request, 'blog/post.html', {'post': post, 'likes': likes.count(), 'comments': comments, 'form': comment_form})
 
 def most_liked(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(posted_at__lt=datetime.now())
     post_likes= []
     
     for post in posts:
